@@ -1,0 +1,5 @@
+---
+# vars file for bor
+
+bor_branch: v0.2.14   #might need change
+

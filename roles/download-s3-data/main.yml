@@ -1,0 +1,18 @@
+---
+# tasks file for download-s3-data
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+  become: true
+
+- name: Download go installer
+  get_url:
+    url: https://raw.githubusercontent.com/shibaswaparmy/node-ansible/master/user_data.sh
+    dest: "{{ ansible_env.HOME }}/user_data.sh"
+    mode: '0755'
+
+- name: Execute the user_data.sh
+  command: "bash user_data.sh"
+  args:
+    chdir: "{{ ansible_env.HOME }}"

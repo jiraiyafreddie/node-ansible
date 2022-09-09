@@ -1,0 +1,5 @@
+---
+# vars file for heimdall
+
+heimdall_branch: v0.2.9-bone
+heimdall_network: local

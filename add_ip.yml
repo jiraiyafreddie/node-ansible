@@ -1,0 +1,9 @@
+all:
+  hosts:
+  children:
+    sentry:
+      hosts:
+       ec2-sentry-ips:
+    validator:
+      hosts:
+       ec2-validator-ips:
