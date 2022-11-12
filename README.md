@@ -54,19 +54,19 @@ ansible validator -m ping
 
 ### Networks
 
-   alpha_v3    (testnet)
+   dev    (testnet)
 
 <!-- There are two networks available:
 
-* `alpha_v3` (Mainnet v1)
-* `testnet-v4` (Mumbai testnet) -->
+* `dev` (Mainnet v1)
+* `beta` (Mumbai testnet) -->
 
 While running Ansible playbook, `network_version` needs to be set.
 
 Similarly for `heimdall_network` following options can be used
 
-    alpha_v3
-<!-- * `alpha_v3` (Mainnet v1)
+    dev
+<!-- * `dev` (Mainnet v1)
 * `mumbai`  (Mumbai testnet) -->
 
 ### Sentry node setup
@@ -74,13 +74,13 @@ Similarly for `heimdall_network` following options can be used
 To show list of hosts where the playbook will run (notice `--list-hosts` at the end):
 
 ```bash
-ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=sentry/sentry heimdall_network=local" --list-hosts
+ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=sentry/sentry heimdall_network=local" --list-hosts
 ```
 
 To run actual playbook on sentry nodes:
 
 ```bash
-ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=sentry/sentry heimdall_network=local"
+ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=sentry/sentry heimdall_network=local"
 ```
 
 ### Validator node setup (with sentry)
@@ -88,13 +88,13 @@ ansible-playbook -l sentry playbooks/network.yml --extra-var="bor_branch=v0.2.14
 To show list of hosts where the playbook will run (notice `--list-hosts` at the end):
 
 ```bash
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=sentry/validator heimdall_network=local" --list-hosts
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=sentry/validator heimdall_network=local" --list-hosts
 ```
 
 To run actual playbook on validator node:
 
 ```bash
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=sentry/validator heimdall_network=local"
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=sentry/validator heimdall_network=local"
 ```
 
 ### Validator node setup (with-out sentry)
@@ -102,13 +102,13 @@ ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2
 To show list of hosts where the playbook will run (notice `--list-hosts` at the end):
 
 ```bash
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=without-sentry heimdall_network=local" --list-hosts
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=without-sentry heimdall_network=local" --list-hosts
 ```
 
 To run actual playbook on validator node:
 
 ```bash
-ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=alpha-v3 network_launch_branch=alpha_v3 node_type=without-sentry heimdall_network=local"
+ansible-playbook -l validator playbooks/network.yml --extra-var="bor_branch=v0.2.14 heimdall_branch=v0.2.9-bone network_version=dev network_launch_branch=dev node_type=without-sentry heimdall_network=local"
 ```
 
 ### Check sync status
