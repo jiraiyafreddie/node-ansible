@@ -71,7 +71,7 @@ function configure_inventory() {
 }
 
 function configure_node() {
-  # https://docs.polygon.technology/docs/validate/validate/run-validator-ansible#configure-the-heimdall-service    #need chnages
+  # https://docs.shibarium.technology/docs/validate/validate/run-validator-ansible#configure-the-heimdall-service    #need chnages
   http_port="${1}"
   network="${2}"
   HEIMDALLD_CONFIG="/root/.heimdalld/config/config.toml"
@@ -102,7 +102,7 @@ function get_snapshot_url() {
     mode="pruned"
   fi
   node_type="${3}"
-  curl -s https://snapshots.matic.today/ | grep "${network}/${node_type}-${mode}" | cut -f 3 -d '>' | cut -f 1 -d '<'    #Need changes
+  curl -s https://snapshots.shib.today/ | grep "${network}/${node_type}-${mode}" | cut -f 3 -d '>' | cut -f 1 -d '<'    #Need changes
 }
 
 function load_snapshots() {
