@@ -14,7 +14,7 @@
 - name: Setup Heidmall
   command: "chdir={{ ansible_env.HOME }}/node/heimdall {{ item }}"
   with_items:
-    - bash setup.sh
+    - bash setup.sh 1
   tags:
     - heimdall
 
