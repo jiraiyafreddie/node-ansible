@@ -4,7 +4,7 @@
 # repository
 network_launch_repository: github.com/shibaswaparmy/launch
 # branch
-network_launch_branch: alpha_v3   #needs change
+network_launch_branch: alpha_v3-new   #needs change
 # version
 network_version: alpha_v3
 # node type
