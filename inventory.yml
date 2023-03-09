@@ -1,10 +1,7 @@
 all:
   hosts:
   children:
-    sentry:
-      hosts:
-        xxx.xxx.xx.xx: # <----- Add IP for sentry node
-        xxx.xxx.xx.xx: # <----- Add IP for sentry node
     validator:
       hosts:
-        xxx.xxx.xx.xx: # <----- Add IP for validator node
+        13.232.255.124:
+        13.126.35.29:
